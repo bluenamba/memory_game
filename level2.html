@@ -1,0 +1,157 @@
+<html>
+  <title>Brain Train - Memory Game</title>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap"
+    />
+    <!-- font of the page -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- links css to this page -->
+  </head>
+
+  <body style="text-align: center; background-color: A2FFFC">
+    <!-- page presentation with brain pic and title-->
+    <div class="maintitle">
+      <h1>
+        <br />
+        <img
+          class="brain"
+          height="20%"
+          src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+          onclick="alert('Trust the process!')"
+        />
+        <br />
+        Brain Train: Memory Game <br />
+        Level 2 <br />
+        <div id="status" class="center"></div>
+      </h1>
+    </div>
+
+    <!-- setting the cards; the section affects everything inbetween-->
+    <section class="gamebody">
+      <section class="game">
+        <!-- copy&paste a <div class="cards"> to add more cards -->
+
+        <!-- card1 -->
+        <div class="cards" data-framework="grape">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw="
+            alt="grape"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card2 -->
+        <div class="cards" data-framework="grape">
+          <img
+            class="front"
+            height="20%"
+            src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw="
+            alt="grape"
+          />
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card3 -->
+        <div class="cards" data-framework="orange">
+          <img
+            class="front"
+            height="20%"
+            src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg"
+            alt="orange"
+          />
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card4 -->
+        <div class="cards" data-framework="orange">
+          <img
+            class="front"
+            height="20%"
+            src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg"
+            alt="orange"
+          />
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card5 -->
+        <div class="cards" data-framework="strawberry">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg"
+            alt="strawberry"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card6 -->
+        <div class="cards" data-framework="strawberry">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg"
+            alt="strawberry"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- brain.train-->
+
+    <div id="attemptDiv" class="topRight"></div>
+    <div id="score" class="topLeft"></div>
+
+    <script src="level2.js"></script>
+
+    <a href="level3.html" class="button">
+      <!--leads to next page-->
+      <button class="button">
+        <b style="font-size: 18px"> level 3 </b>
+      </button>
+    </a>
+  </body>
+</html>
