@@ -1,253 +1,188 @@
 <html>
-  <title>
-   Brain Train - Memory Game
-  </title>
-  <head>      
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap"/> <!-- font of the page -->
-    <link rel="stylesheet" href="grid_style.css"/> <!-- links css to this page -->
-  
-  
-  
+  <title>Brain Train - Memory Game</title>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap"
+    />
+    <!-- font of the page -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- links css to this page -->
   </head>
-    
-    <body style="text-align:center;background-color:A2FFFC"> 
-      
-     <!-- page presentation with brain pic and title-->  
-      <div class="maintitle">      
-    <h1>
-        <br>    
-    <img class= "brain"
-         height="20%"
-           src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" onclick="alert('Trust the process!')"/> 
-     <br>
-    Brain Train: Memory Game <br> Level 3 <br>
-      <div id="status" class="center"> </div>
-    </h1>   
-        
-      </div>
-      
-      
-      <!-- setting the cards; the section affects everything inbetween--> 
-      <section class="gamebody">  
-      <section class="game">  
-      
-      <!-- copy&paste a <div class="cards"> to add more cards -->  
-        
-      <!-- card1 --> 
-      <div class="cards" data-framework="grape"> <!-- MUST name it data-framework so that we can match later--> 
-        
-        <img class="front" height="20%" 
-             src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw=" alt="grape">   <!--alt classifies img as deco-->  
-         <img class="back" height="20%" 
-              src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside"> 
-      </div>
-      
-      <!-- card2 --> 
-      <div class="cards" data-framework="grape">
-        
-        <img class="front" height="20%" 
-             src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw=" alt="grape"> 
-         <img class="back" height="20%" 
-            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside"> 
-      </div>
-        
-      <!-- card3 --> 
-      <div class="cards" data-framework="orange">
-        
-        <img class="front" height="20%" 
-             src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg" alt="orange"> 
-        <img class="back" height="20%" 
-            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside">  
-        
-      </div>
-        
-      <!-- card4 --> 
-      <div class="cards" data-framework="orange">
-        
-        <img class="front" height="20%" 
-             src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg" alt="orange"> 
-        <img class="back" height="20%" 
-              src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside">  
-        
-      </div>     
-        
-        <!-- card5 --> 
-        <div class="cards" data-framework="strawberry"> <!-- MUST name it data-framework so that we can match later--> 
-        
-        <img class="front" height="20%" 
-             src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg" alt="strawberry">   <!--alt classifies img as deco-->  
-         <img class="back" height="20%" 
-              src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside"> 
-      </div>
-        
-        <!-- card6 --> 
-        <div class="cards" data-framework="strawberry"> <!-- MUST name it data-framework so that we can match later--> 
-        
-        <img class="front" height="20%" 
-             src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg" alt="strawberry">   <!--alt classifies img as deco-->  
-         <img class="back" height="20%" 
-              src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside"> 
-      </div>
-        
-         <!-- card7 --> 
-        <div class="cards" data-framework="watermelon"> <!-- MUST name it data-framework so that we can match later--> 
-        
-        <img class="front" height="20%" 
-             src="https://www.seekpng.com/png/detail/215-2154492_icon-png-transprent-free-download-citrullus-food-watermelon.png" alt="watermelon">   <!--alt classifies img as deco-->  
-         <img class="back" height="20%" 
-              src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside"> 
-      </div>
-        
-         <!-- card8 --> 
-        <div class="cards" data-framework="watermelon"> <!-- MUST name it data-framework so that we can match later--> 
-        
-        <img class="front" height="20%" 
-             src="https://www.seekpng.com/png/detail/215-2154492_icon-png-transprent-free-download-citrullus-food-watermelon.png" alt="watermelon">   <!--alt classifies img as deco-->  
-         <img class="back" height="20%" 
-              src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg" alt="backside"> 
-      </div>
-        
-      
-        
-        </section>
-        
-        </section>
-      
-      <!-- brain.train-->
-      
-           <div id="attemptDiv" class="topRight"> </div>   
-      <div id="score" class="topLeft"> </div>   
-      
-  
-    
-      
-      <script>
-      var counter=0 <!-- counter of how many pairs matched in the disableCards fn-->
-      var number_cards=8
-      var attemptLeft=number_cards-1
-      var score=0
-      document.getElementById("attemptDiv").innerHTML="MOVES LEFT"+ "<br>"+ attemptLeft+"/"+ (number_cards-1)
-      document.getElementById("score").innerHTML="SCORE"+ "<br>"+ score
-      function attempt(){ 
-        attemptLeft--
-        document.getElementById("attemptDiv").innerHTML="MOVES LEFT"+ "<br>"+ attemptLeft+"/"+ (number_cards-1)
-      }
-        function winner_loser (){
-          if (attemptLeft==0) {
-            document.getElementById("status").innerHTML="You Lost!"
-            score--
-             document.getElementById("score").innerHTML="SCORE"+ "<br>"+ score
-            attemptLeft=number_cards-1
-            document.getElementById("attemptDiv").innerHTML="MOVES LEFT"+ "<br>"+ attemptLeft+"/"+ (number_cards-1)
-          }
-          else if (counter==number_cards) {
-            document.getElementById("status").innerHTML="You Won!" 
-            score++
-            document.getElementById("score").innerHTML="SCORE"+ "<br>"+ score
-          }
-        }
-        
-        
-        const cards= document.querySelectorAll('.cards');
-      
-      // flips the card
-      function flipCard() {
-        this.classList.toggle('flip');
-      }
-      
-      cards.forEach(card => card.addEventListener('click', flipCard));
-        //store card
-        
- 
-         let FlippedCard = false;
-        let lockBoard = false;
-        let firstCard, secondCard; 
-        
-        function flipCard(){
-        if (lockBoard) return;
-        if (this === firstCard) return;
-          
-          this.classList.add('flip');
-          
-          if (!FlippedCard) {
-            FlippedCard = true; 
-            firstCard = this;
-            return;
-          }
-      
-    secondCard = this;
-    <!--lockBoard = true; -->commented
-          
-          checkForMatch()
-          
-          
-        }
-     
-      console.log("random")
-          function checkForMatch(){
-    
-        <!--if (firstCard.dataset.framework === secondCard.dataset.framework) {
-            if (firstCard.getAttribute('data-framework') === secondCard.getAttribute('data-framework')) {
-         disableCards();
-       return;
-       }
-console.log("about to unflip");
-     unflipCards();
-   }
-  
-                 
- 
-        function disableCards(){
-          console.log("in disable") <!-- removed after-->
-          counter+=2
-          
-        firstCard.removeEventListener ('click', flipCard);
-          secondCard.removeEventListener ('click', flipCard);
 
-          winner_loser() <!--last flip/pair to know if user won-->
-          resetBoard()
-          
-          
-        }
-        
-        function unflipCards(){
-          console.log("in unflip")
-         lockBoard=true; 
-          
-          setTimeout(()=> {  
-            firstCard.classList.remove('flip');
-            secondCard.classList.remove('flip');
-            
-          resetBoard();
-            
-            
-          },1500);
-          
-         attempt()
-           winner_loser() <!--if attemptLEf=0, then we call this fct to say it's game over-->
-     
-        }
-        
-        function resetBoard(){
-          
-     [FlippedCard, lockBoard] = [false,false];
-      [firstCard, secondCard] = [null, null];
-          
-        }
-        
-        // shuffle elements
-        cards.forEach(card => {
-        const ramdomPos = Math.floor(Math.random() * cards.length); 
-        card.style.order = ramdomPos;
-        });
+  <body style="text-align: center; background-color: A2FFFC">
+    <!-- page presentation with brain pic and title-->
+    <div class="maintitle">
+      <h1>
+        <br />
+        <img
+          class="brain"
+          height="20%"
+          src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+          onclick="alert('Trust the process!')"
+        />
+        <br />
+        Brain Train: Memory Game <br />
+        Level 3 <br />
+        <div id="status" class="center"></div>
+      </h1>
+    </div>
 
-        cards.forEach(card => card.addEventListener('click', flipCard));
-           
-    
-      </script>
-  
-        
-    </body>
-  
+    <!-- setting the cards; the section affects everything inbetween-->
+    <section class="gamebody">
+      <section class="game">
+        <!-- copy&paste a <div class="cards"> to add more cards -->
+
+        <!-- card1 -->
+        <div class="cards" data-framework="grape">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw="
+            alt="grape"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card2 -->
+        <div class="cards" data-framework="grape">
+          <img
+            class="front"
+            height="20%"
+            src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw="
+            alt="grape"
+          />
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card3 -->
+        <div class="cards" data-framework="orange">
+          <img
+            class="front"
+            height="20%"
+            src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg"
+            alt="orange"
+          />
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card4 -->
+        <div class="cards" data-framework="orange">
+          <img
+            class="front"
+            height="20%"
+            src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg"
+            alt="orange"
+          />
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card5 -->
+        <div class="cards" data-framework="strawberry">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg"
+            alt="strawberry"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card6 -->
+        <div class="cards" data-framework="strawberry">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg"
+            alt="strawberry"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card7 -->
+        <div class="cards" data-framework="watermelon">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://www.seekpng.com/png/detail/215-2154492_icon-png-transprent-free-download-citrullus-food-watermelon.png"
+            alt="watermelon"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card8 -->
+        <div class="cards" data-framework="watermelon">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="20%"
+            src="https://www.seekpng.com/png/detail/215-2154492_icon-png-transprent-free-download-citrullus-food-watermelon.png"
+            alt="watermelon"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="20%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- brain.train-->
+
+    <div id="attemptDiv" class="topRight"></div>
+    <div id="score" class="topLeft"></div>
+
+    <script src="level3.js"></script>
+  </body>
 </html>
