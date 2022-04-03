@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.maintitle {
+  font-family: "Fredoka", sans-serif;
+}
+
+.brain {
+  border-radius: 12px;
+}
+
+.gamebody {
+  height: 100vh;
+  display: flex;
+}
+
+.game {
+  width: 640px;
+  height: 640px;
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.cards {
+  display: grid;
+  width: calc(25% - 10px);
+  height: calc(50% - 10px);
+  position: relative;
+  padding: 5px;
+  transform: scale (1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cards: active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.cards.flip {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  border-radius: 12px;
+  background: #fcf755;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.topLeft {
+  font-family: "Fredoka", sans-serif;
+  width: 150px;
+  padding: 10px;
+  border: 5px solid #33ff8f;
+  color: #33ff8f;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.topRight {
+  font-family: "Fredoka", sans-serif;
+  width: 150px;
+  padding: 10px;
+  border: 5px solid #33ff8f;
+  color: #33ff8f;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.center {
+  font-family: "Fredoka", sans-serif;
+  width: 250px;
+  padding: 20px;
+  border: 5px solid #33ff8f;
+  color: #ffdf00;
+  text-align: center;
+  background-color: black;
+  position: relative;
+  top: 10px;
+  margin: auto;
+}
+
+.button {
+  width: 80px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 110px;
+  font-family: "Fredoka", sans-serif;
+}
