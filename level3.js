@@ -2,6 +2,7 @@ var counter = 0;
 var number_cards = 8;
 var attemptLeft = number_cards - 1;
 var score = 0;
+
 document.getElementById("attemptDiv").innerHTML =
   "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
 document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;

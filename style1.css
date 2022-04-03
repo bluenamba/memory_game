@@ -13,21 +13,14 @@
 }
 
 .gamebody {
-  height: 60vh;
+  height: 100vh;
   display: flex;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  margin-right: 5px;
-  margin-left: 5px;
 }
 
 .game {
   width: 640px;
   height: 640px;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  margin-right: 200px;
-  margin-left: 635px;
+  margin:auto;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
@@ -35,8 +28,8 @@
 
 .cards {
   display: grid;
-  width: 33.33%;
-  height: calc(33.333% - 10px);
+  width: calc(50% - 10px);
+  height: calc(50% - 10px);
   position: relative;
   padding: 5px;
   transform: scale (1);
