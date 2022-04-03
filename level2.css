@@ -101,8 +101,10 @@
 }
 
 .button {
-  width: 80px;
-  position:absolute;
-  bottom:0;
+  width: 100px;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 110px;
   font-family: "Fredoka", sans-serif;
 }
