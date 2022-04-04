@@ -1,5 +1,5 @@
 var counter = 0;
-var number_cards = 6;
+var number_cards = document.getElementsByClassName("cards").length
 var attemptLeft = number_cards - 1;
 var score = 0;
 const button = document.getElementById("nextLevel");

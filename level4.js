@@ -1,5 +1,5 @@
 var counter = 0;
-var number_cards = document.querySelectorAll('allCards .cards').length;
+var number_cards = document.getElementsByClassName("cards").length;
 var attemptLeft = number_cards - 1;
 var score = 0;
 
@@ -11,6 +11,7 @@ function attempt() {
   attemptLeft--;
   document.getElementById("attemptDiv").innerHTML =
     "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
+  console.log(number_cards);
 }
 
 function winner_loser() {
