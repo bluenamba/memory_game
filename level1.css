@@ -2,11 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
 }
 
 
 .maintitle {
-  font-family: "Fredoka", sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
@@ -69,11 +69,11 @@
 }
 
 .topLeft {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Rubik Mono One", sans-serif;
   width: 150px;
   padding: 10px;
-  border: 5px solid #ffcc00;
-  color: #ffcc00;
+  border: 5px solid black;
+  color: black;
   text-align: center;
   background-color: black;
   position: absolute;
@@ -83,8 +83,8 @@
 }
 
 .topRight {
-  font-family: "Fredoka", sans-serif;
-  width: 150px;
+  font-family: "Rubik Mono One", sans-serif;
+  width: 180px;
   padding: 10px;
   border: 5px solid #ffcc00;
   color: #ffcc00;
@@ -97,7 +97,6 @@
 }
 
 .center {
-  font-family: "Fredoka", sans-serif;
   padding: 5px;
   text-align: center;
   position: relative;
@@ -106,10 +105,9 @@
 }
 
 .button {
-  width: 100px;
+  width: 120px;
   height: 50px;
   margin-top: 20px;
-  font-family: "Fredoka", sans-serif;
   border-radius: 10px;
   transition-duration: 0.4s;
 }
