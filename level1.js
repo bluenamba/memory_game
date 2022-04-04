@@ -11,6 +11,14 @@ function attempt() {
   document.getElementById("attemptDiv").innerHTML =
     "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
 }
+
+function nextLevel() {
+  if (button.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 function winner_loser() {
   if (attemptLeft == 0) {
     document.getElementById("status").innerHTML = "You Lost!";
@@ -22,6 +30,7 @@ function winner_loser() {
   } else if (counter == number_cards) {
     document.getElementById("status").innerHTML = "You Won!";
     score++;
+    
     document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
   }
 }
