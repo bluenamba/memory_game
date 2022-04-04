@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Fredoka", sans-serif;
+  /*font-family: "Rubik Mono One", sans-serif;*/
 }
 
 
@@ -72,8 +73,8 @@
   font-family: "Rubik Mono One", sans-serif;
   width: 150px;
   padding: 10px;
-  border: 5px solid black;
-  color: black;
+  border: 5px solid #4dff4d;
+  color: #4dff4d;
   text-align: center;
   background-color: black;
   position: absolute;
@@ -86,8 +87,8 @@
   font-family: "Rubik Mono One", sans-serif;
   width: 180px;
   padding: 10px;
-  border: 5px solid #ffcc00;
-  color: #ffcc00;
+  border: 5px solid #4dff4d;
+  color: #4dff4d;
   text-align: center;
   background-color: black;
   position: absolute;
@@ -100,7 +101,7 @@
   padding: 5px;
   text-align: center;
   position: relative;
-  top: 10px;
+  top: 5px;
   margin: auto;
 }
 
@@ -113,6 +114,6 @@
 }
 
 .button:hover {
-  background-color: #fff5cc; /* Green */
-  color: black;
+  background-color: black; 
+  color: #4dff4d;
 }
