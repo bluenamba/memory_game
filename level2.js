@@ -2,6 +2,9 @@ var counter = 0;
 var number_cards = 6;
 var attemptLeft = number_cards - 1;
 var score = 0;
+const button = document.getElementById("nextLevel");
+
+button.style.display="none";
 
 document.getElementById("attemptDiv").innerHTML =
   "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
@@ -17,6 +20,7 @@ function winner_loser() {
   if (attemptLeft == 0) {
     document.getElementById("status").innerHTML = "You Lost!";
     score--;
+    button.style.display="block";
     document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
     attemptLeft = number_cards - 1;
     document.getElementById("attemptDiv").innerHTML =
@@ -24,6 +28,7 @@ function winner_loser() {
   } else if (counter == number_cards) {
     document.getElementById("status").innerHTML = "You Won!";
     score++;
+    button.style.display="block";
     document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
   }
 }

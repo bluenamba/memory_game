@@ -1,20 +1,18 @@
 var counter = 0;
-var number_cards = 4;
+var number_cards = document.querySelectorAll('allCards .cards').length;
 var attemptLeft = number_cards - 1;
 var score = 0;
-const button = document.getElementById("nextLevel");
-
-// hiding the net level button
-button.style.display="none";
 
 document.getElementById("attemptDiv").innerHTML =
   "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
 document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
+
 function attempt() {
   attemptLeft--;
   document.getElementById("attemptDiv").innerHTML =
     "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
 }
+
 function winner_loser() {
   if (attemptLeft == 0) {
     document.getElementById("status").innerHTML = "You Lost!";
@@ -26,7 +24,6 @@ function winner_loser() {
   } else if (counter == number_cards) {
     document.getElementById("status").innerHTML = "You Won!";
     score++;
-    button.style.display="block"; // displaying the button once the user completed the level
     document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
   }
 }
@@ -55,7 +52,6 @@ function flipCard() {
   checkForMatch();
 }
 
-console.log("random");
 function checkForMatch() {
   if (
     firstCard.getAttribute("data-framework") ===
