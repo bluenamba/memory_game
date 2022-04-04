@@ -20,7 +20,7 @@
 }
 
 .game {
-  width: 840px;
+  width: 640px;
   height: 640px;
   margin: auto;
   display: flex;
@@ -31,7 +31,7 @@
 .cards {
   display: grid;
   width: calc(25% - 10px);
-  height: calc(33.33% - 10px);
+  height: calc(25% - 10px);
   position: relative;
   padding: 5px;
   transform: scale (1);

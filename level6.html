@@ -1,0 +1,409 @@
+<html>
+  <title>Brain Train - Memory Game</title>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik Mono One"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font of the page -->
+    <link rel="stylesheet" href="level6.css" />
+    <!-- links css to this page -->
+  </head>
+
+  <body style="text-align: center; background-color: #ccfff5">
+    <!-- page presentation with brain pic and title-->
+    <div class="maintitle">
+      <h1>
+        <br />
+        <span style="color: #ff0000">L</span>
+        <span style="color: #00cc00">E</span>
+        <span style="color: #ffcc00">V</span>
+        <span style="color: #9900cc">E</span>
+        <span style="color: #ff0066">L</span>
+        <span style="color: #000099">6</span>
+        <br />
+        <br />
+        <div id="status" class="center"></div>
+      </h1>
+      <div id="replay">
+        <button class="button" onclick="location.reload()">Replay</button>
+      </div>
+    </div>
+
+    <!-- setting the cards; the section affects everything inbetween-->
+    <section class="gamebody">
+      <section class="game">
+        <!-- copy&paste a <div class="cards"> to add more cards -->
+
+        <!-- card1 -->
+        <div id="allCards" class="cards" data-framework="grape">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw="
+            alt="grape"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card2 -->
+        <div class="cards" data-framework="grape">
+          <img
+            class="front"
+            height="15%"
+            src="https://media.istockphoto.com/vectors/grapes-icon-grapevine-with-leaf-vector-id1193510069?k=20&m=1193510069&s=612x612&w=0&h=K3xC55wDfPsuEkggrN3mzFFWAC3j7bQ2FtGAbdLDkBw="
+            alt="grape"
+          />
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card3 -->
+        <div class="cards" data-framework="orange">
+          <img
+            class="front"
+            height="15%"
+            src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg"
+            alt="orange"
+          />
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card4 -->
+        <div class="cards" data-framework="orange">
+          <img
+            class="front"
+            height="15%"
+            src="https://m.media-amazon.com/images/I/51w76ofL4KL._AC_SL1160_.jpg"
+            alt="orange"
+          />
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card5 -->
+        <div class="cards" data-framework="strawberry">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg"
+            alt="strawberry"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card6 -->
+        <div class="cards" data-framework="strawberry">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://static.vecteezy.com/system/resources/previews/004/557/722/non_2x/fruit-strawberry-cartoon-object-vector.jpg"
+            alt="strawberry"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card7 -->
+        <div class="cards" data-framework="watermelon">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://www.seekpng.com/png/detail/215-2154492_icon-png-transprent-free-download-citrullus-food-watermelon.png"
+            alt="watermelon"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+
+        <!-- card8 -->
+        <div class="cards" data-framework="watermelon">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://www.seekpng.com/png/detail/215-2154492_icon-png-transprent-free-download-citrullus-food-watermelon.png"
+            alt="watermelon"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="apple">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://media.istockphoto.com/vectors/cute-bright-red-apple-icon-isolated-on-white-vector-id90692172?k=20&m=90692172&s=612x612&w=0&h=J_mkAAYYinvK1EfuD772Z8u10N41xDlNV0Tvbgo0AVE="
+            alt="apple"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="apple">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://media.istockphoto.com/vectors/cute-bright-red-apple-icon-isolated-on-white-vector-id90692172?k=20&m=90692172&s=612x612&w=0&h=J_mkAAYYinvK1EfuD772Z8u10N41xDlNV0Tvbgo0AVE="
+            alt="apple"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="pineapple">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/80/31/64/360_F_180316434_mY7TCf3Yp1MqMCJ0fOITXYLpATSHPQI1.jpg"
+            alt="pineapple"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="pineapple">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/80/31/64/360_F_180316434_mY7TCf3Yp1MqMCJ0fOITXYLpATSHPQI1.jpg"
+            alt="pineapple"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        
+        <div class="cards" data-framework="kiwi">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://cdn.glitch.global/dcc51968-6374-4196-b292-0f4bde1def48/de58441c-1d2a-4428-bba4-b83b2171257a.image.png?v=1649088690677"
+            alt="kiwi"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="kiwi">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://cdn.glitch.global/dcc51968-6374-4196-b292-0f4bde1def48/de58441c-1d2a-4428-bba4-b83b2171257a.image.png?v=1649088690677"
+            alt="kiwi"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        
+        <div class="cards" data-framework="lemon">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://t4.ftcdn.net/jpg/02/88/50/97/360_F_288509750_Rx3mpwXN4jaSrbQx1uirbUSMmcRWm8I4.jpg"
+            alt="lemon"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="lemon">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://t4.ftcdn.net/jpg/02/88/50/97/360_F_288509750_Rx3mpwXN4jaSrbQx1uirbUSMmcRWm8I4.jpg"
+            alt="lemon"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        
+          <div class="cards" data-framework="mango">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://media.istockphoto.com/vectors/mango-icon-cartoon-vector-id1187003527?k=20&m=1187003527&s=170667a&w=0&h=UXVf8jdh0FbmDklKT7GB78en9GxqWzCL6F20_xpEkYA="
+            alt="mango"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="mango">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://media.istockphoto.com/vectors/mango-icon-cartoon-vector-id1187003527?k=20&m=1187003527&s=170667a&w=0&h=UXVf8jdh0FbmDklKT7GB78en9GxqWzCL6F20_xpEkYA="
+            alt="mango"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        
+        <div class="cards" data-framework="banana">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://cdn.glitch.global/dcc51968-6374-4196-b292-0f4bde1def48/de58441c-1d2a-4428-bba4-b83b2171257a.image.png?v=1649088690677"
+            alt="kiwi"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+        <div class="cards" data-framework="kiwi">
+          <!-- MUST name it data-framework so that we can match later-->
+
+          <img
+            class="front"
+            height="15%"
+            src="https://cdn.glitch.global/dcc51968-6374-4196-b292-0f4bde1def48/de58441c-1d2a-4428-bba4-b83b2171257a.image.png?v=1649088690677"
+            alt="kiwi"
+          />
+          <!--alt classifies img as deco-->
+          <img
+            class="back"
+            height="15%"
+            src="https://t3.ftcdn.net/jpg/01/91/11/56/360_F_191115633_Z6OJdy0VwG6ZOZRYamBaETay8v9WGIxf.jpg"
+            alt="backside"
+          />
+        </div>
+      </section>
+    </section>
+
+    <!-- brain.train-->
+
+    <div id="attemptDiv" class="topRight"></div>
+    <div id="score" class="topLeft"></div>
+
+    <script src="levels.js"></script>
+  </body>
+</html>
