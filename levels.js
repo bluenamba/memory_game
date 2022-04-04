@@ -27,7 +27,10 @@ function winner_loser() {
   if (attemptLeft == 0) {
     document.getElementById("status").innerHTML = "You Lost!";
     score--;
-    reloadButton.style.display="block";
+    if (reloadButton) {
+      reloadButton.style.display="block";  
+    } // giving a replay option when the user loses
+    
     document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
     attemptLeft = number_cards - 1;
     document.getElementById("attemptDiv").innerHTML =
@@ -35,8 +38,10 @@ function winner_loser() {
   } else if (counter == number_cards) {
     document.getElementById("status").innerHTML = "You Won!";
     score++;
-    button.style.display="block"; // displaying the button once the user completed the level
-    document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
+      if (button){
+        button.style.display="block"; // displaying the next level button once the user completed the level
+      }
+    document.getElementById("score").innerHTML = "SCORE" + "<br>" + score; // does this show up
   }
 }
 

@@ -116,6 +116,7 @@
   width: 120px;
   height: 50px;
   margin-top: 20px;
+  margin-bottom: 5px;
   border-radius: 10px;
   transition-duration: 0.4s;
 }
