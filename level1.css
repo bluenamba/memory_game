@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-html,body {
-margin:0;
-padding:0;
-overflow-x:hidden;
-}
 
 .maintitle {
   font-family: "Fredoka", sans-serif;
@@ -21,7 +16,7 @@ overflow-x:hidden;
 }
 
 .gamebody {
-  height: 80vh;
+  height: 75vh;
   display: flex;
 }
 
@@ -80,6 +75,7 @@ overflow-x:hidden;
   position: absolute;
   top: 10px;
   left: 20px;
+  border-radius: 10px;
 }
 
 .topRight {
@@ -93,16 +89,13 @@ overflow-x:hidden;
   position: absolute;
   top: 10px;
   right: 20px;
+  border-radius: 10px;
 }
 
 .center {
   font-family: "Fredoka", sans-serif;
-  width: 250px;
-  padding: 20px;
-  border: 5px solid #33ff8f;
-  color: #ffdf00;
+  padding: 5px;
   text-align: center;
-  background-color: black;
   position: relative;
   top: 10px;
   margin: auto;
@@ -110,8 +103,16 @@ overflow-x:hidden;
 
 .button {
   width: 100px;
+  height: 50px;
   margin-top: 20px;
   margin-right: 100px;
   margin-left: 100px;
   font-family: "Fredoka", sans-serif;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
