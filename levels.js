@@ -1,11 +1,13 @@
 var counter = 0;
-var number_cards = 4;
+var number_cards = document.getElementsByClassName("cards").length;
 var attemptLeft = number_cards - 1;
 var score = 0;
 const button = document.getElementById("nextLevel");
 
-// hiding the net level button
-button.style.display="none";
+// hiding the net level button if it exists
+if(button) {
+ button.style.display="none"; 
+}
 
 document.getElementById("attemptDiv").innerHTML =
   "MOVES LEFT" + "<br>" + attemptLeft + "/" + (number_cards - 1);
