@@ -3,10 +3,16 @@ var number_cards = document.getElementsByClassName("cards").length;
 var attemptLeft = number_cards - 1;
 var score = 0;
 const button = document.getElementById("nextLevel");
+const reloadButton = document.getElementById("replay");
 
 // hiding the net level button if it exists
 if(button) {
  button.style.display="none"; 
+}
+
+// hiding the replay button if it exists
+if(reloadButton) {
+ reloadButton.style.display="none"; 
 }
 
 document.getElementById("attemptDiv").innerHTML =
@@ -21,6 +27,7 @@ function winner_loser() {
   if (attemptLeft == 0) {
     document.getElementById("status").innerHTML = "You Lost!";
     score--;
+    reloadButton.style.display="block";
     document.getElementById("score").innerHTML = "SCORE" + "<br>" + score;
     attemptLeft = number_cards - 1;
     document.getElementById("attemptDiv").innerHTML =

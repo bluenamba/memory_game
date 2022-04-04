@@ -31,27 +31,17 @@
   perspective: 1000px;
 }
 
-/*.cards {
+.cards {
   display: grid;
+  position: relative;
   width: calc(50% - 10px);
   height: calc(50% - 10px);
-  position: relative;
   padding: 5px;
   transform: scale (1);
   transform-style: preserve-3d;
   transition: transform 0.5s;
-}*/
-
-.cards.level1 {
-  display: grid;
-  width: calc(50% - 10px);
-  height: calc(50% - 10px);
-  position: relative;
-  padding: 5px;
-  transform: scale (1);
-  transform-style: preserve-3d;
-  transition: transform 0.5s; 
 }
+
 
 .cards: active {
   transform: scale(0.97);
