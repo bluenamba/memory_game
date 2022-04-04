@@ -2,8 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /*font-family: "Fredoka", sans-serif;*/
-  /*font-family: "Rubik Mono One", sans-serif;*/
 }
 
 .maintitle {
@@ -22,8 +20,8 @@
 }
 
 .game {
-  width: 540px;
-  height: 340px;
+  width: 840px;
+  height: 640px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
