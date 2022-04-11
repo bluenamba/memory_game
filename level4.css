@@ -111,7 +111,7 @@
   font-size: 16px;
   width: 120px;
   height: 50px;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 10px;
   transition-duration: 0.4s;
@@ -120,4 +120,8 @@
 .button:hover {
   background-color: black;
   color: #4dff4d;
+}
+
+.player {
+  font-size:14px;
 }

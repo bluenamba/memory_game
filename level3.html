@@ -1,4 +1,25 @@
 <html>
+  <script
+    defer
+    src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+  ></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjv8ideA_2ZEL9GHT070ugdnXZVAlc8Ik",
+      authDomain: "brain-train-e845e.firebaseapp.com",
+      databaseURL: "https://brain-train-e845e-default-rtdb.firebaseio.com",
+      projectId: "brain-train-e845e",
+      storageBucket: "brain-train-e845e.appspot.com",
+      messagingSenderId: "1092651900799",
+      appId: "1:1092651900799:web:ca7004616855779f8ac44a",
+      measurementId: "G-H7NMD8RQK7",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
   <title>Brain Train - Memory Game</title>
   <head>
     <link
@@ -33,9 +54,9 @@
         <span style="color: #ff0066">L</span>
         <span style="color: #000099"> 3</span>
         <br />
-        <br />
         <div id="status" class="center"></div>
       </h1>
+      <p id="user" class="player"></p>
       <div id="nextLevel">
         <a href="level4.html" class="button">
           <!--leads to next page-->
@@ -44,8 +65,22 @@
           </button>
         </a>
       </div>
+      <div id="saveLevel">
+        <button class="button" onclick="createSavedState()">SAVE</button>
+      </div>
+      <div id="home">
+        <a href="index.html" class="button">
+          <!--leads to next page-->
+          <button class="button">HOME</button>
+        </a>
+      </div>
       <div id="replay">
-        <button class="button" onclick="location.reload()">Replay</button>
+        <a href="level1.html" class="button">
+          <!--leads to next page-->
+          <button class="button">
+            <b> Replay </b>
+          </button>
+        </a>
       </div>
     </div>
 
@@ -142,8 +177,6 @@
 
         <!-- card6 -->
         <div class="cards" data-framework="strawberry">
-          <!-- MUST name it data-framework so that we can match later-->
-
           <img
             class="front"
             height="15%"
@@ -161,8 +194,6 @@
 
         <!-- card7 -->
         <div class="cards" data-framework="watermelon">
-          <!-- MUST name it data-framework so that we can match later-->
-
           <img
             class="front"
             height="15%"
@@ -180,8 +211,6 @@
 
         <!-- card8 -->
         <div class="cards" data-framework="watermelon">
-          <!-- MUST name it data-framework so that we can match later-->
-
           <img
             class="front"
             height="15%"
@@ -199,11 +228,14 @@
       </section>
     </section>
 
-    <!-- brain.train-->
-
     <div id="attemptDiv" class="topRight"></div>
     <div id="score" class="topLeft"></div>
 
+    <script>
+      var score = 2;
+      localStorage.setItem("myNextLevel", "level4");
+      document.getElementById("user").innerHTML = "player:" + localStorage.user;
+    </script>
     <script src="levels.js"></script>
   </body>
 </html>

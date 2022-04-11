@@ -1,0 +1,160 @@
+<html>
+  <title>Brain Train - Memory Game</title>
+
+  <script
+    defer
+    src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+  ></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjv8ideA_2ZEL9GHT070ugdnXZVAlc8Ik",
+      authDomain: "brain-train-e845e.firebaseapp.com",
+      databaseURL: "https://brain-train-e845e-default-rtdb.firebaseio.com",
+      projectId: "brain-train-e845e",
+      storageBucket: "brain-train-e845e.appspot.com",
+      messagingSenderId: "1092651900799",
+      appId: "1:1092651900799:web:ca7004616855779f8ac44a",
+      measurementId: "G-H7NMD8RQK7",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik Mono One"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font of the page -->
+    <link rel="stylesheet" href="level1.css" />
+    <!-- links css to this page -->
+  </head>
+
+  <style>
+    .brain {
+      border-radius: 12px;
+    }
+
+    .maintitle {
+      font-family: "Rubik Mono One", sans-serif;
+      font-weight: bold;
+    }
+
+    .buttonDone {
+      background-color: #e6e6e6;
+      color: black;
+      cursor: pointer;
+      font-family: "Rubik Mono One", sans-serif;
+      font-size: 10px;
+      width: 50px;
+      height: 25px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      transition-duration: 0.4s;
+    }
+
+    .button {
+      background-color: #021305;
+      color: #1dfa40;
+      cursor: pointer;
+    }
+
+    .paragraph {
+      background-color: 021305;
+      color: 1dfa40;
+      border: 2px solid back;
+      margin-top: 50px;
+      margin-bottom: 10px;
+      margin-right: 400px;
+      margin-left: 400px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-right: 20px;
+      padding-left: 20px;
+      border-radius: 12px;
+      font-family: "Fredoka", sans-serif;
+      font-size: 18px;
+    }
+
+    .userName {
+      border: 2px solid black;
+      border-radius: 4px;
+      font-family: "Rubik Mono One", sans-serif;
+      width: 150px;
+      height: 25px;
+      font-size: 12px;
+    }
+  </style>
+
+  <body style="text-align: center; background-color: #ccfff5">
+    <!-- page presentation with brain pic and title-->
+    <div class="maintitle">
+      <h1>
+        <br />
+        Welcome to Brain Train
+        <br />
+        <br />
+      </h1>
+
+      Enter your username:
+      <input class="userName" id="userName" />
+      <button class="buttonDone" onclick="createUser()">Done</button><br />
+
+      <div class="paragraph">
+        <p>
+          THIS GAME WILL HELP YOU IMPROVE YOUR MEMORY RECALL SKILLS.<br />
+          THE INSTRUCTIONS ARE SIMPLE TO FOLLOW <br /><br />
+        </p>
+        <p>
+          INSTRUCTIONS:<br />
+          1. START BY FLIPPING A CARD.<br />
+          2. FLIP ANOTHER CARD OF YOUR CHOICE. <br />
+          3. IF THE CARDS' IMAGES ARE SIMILAR, <br />
+          YOU FOUND YOUR FIRST MATCH! <br />
+          4. IF THE CARD'S IMAGE ARE DIFFERENT, <br />
+          BOTH CARDS WILL FACE DOWNWARDS AGAIN. <br />
+          5. YOU CAN FLIP ANOTHER CARD TO FIND ITS MATCH. <br />
+          6. CAUTION: YOU HAVE TO FLIP YOUR CARD WITHIN THE GIVEN NUMBER OF
+          MOVES!! <br />
+          7. ONCE ALL THE CARDS ARE FLIPPED WITH THEIR MATCH, <br />
+          YOU HAVE WON! AND, MAY PROCEED TO THE NEXT LEVEL.<br />
+          <br />
+          *REMEMBER: SAVE YOUR USERNAME, SO THAT YOU CAN COME BACK AND PLAY AT
+          THE SAME LEVEL!!*
+          <br />
+        </p>
+      </div>
+      <script language="javascript" type="text/javascript">
+        function set_ref() {
+          var page = localStorage.getItem("pageToLoad");
+          var href = page + ".html";
+          document.getElementById("anchor").href = href;
+          var userName = document.getElementById("userName").value;
+          localStorage.user = userName;
+        }
+      </script>
+
+      <a id="anchor">
+        <button class="button">
+          <b style="font-size: 18px" onclick="set_ref()"> Start Game! </b>
+        </button>
+      </a>
+    </div>
+
+    <script src="levels.js"></script>
+  </body>
+</html>
